@@ -38,7 +38,8 @@ Future<MaskForCameraViewResult?> cropImage(
   double h = cropHeight * increasedTimesH;
 
   Image croppedImage =
-      copyCrop(image, x.toInt(), y.toInt(), w.toInt(), h.toInt());
+      copyCrop(image, x: x.toInt(), y: y.toInt(), width: w.toInt(), height: h.toInt());
+    
   MaskForCameraViewResult res = MaskForCameraViewResult();
   if (insideLine != null) {
     MaskForCameraViewResult halfRes =
